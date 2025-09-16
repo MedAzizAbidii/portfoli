@@ -1,4 +1,25 @@
-# Getting Started with Create React App
+# Portfolio - Mohamed Aziz Abidi
+
+A modern React portfolio website with neon theme and internationalization support.
+
+## Features
+
+- 🎨 Modern neon theme with glassmorphism effects
+- 🌐 Complete internationalization (English/French)
+- 📱 Fully responsive design
+- ⚡ Smooth animations with Framer Motion
+- 🚀 Built with React and TypeScript
+
+## Technologies
+
+- React 18
+- TypeScript
+- Framer Motion
+- react-i18next
+- CSS3 with custom properties
+- Responsive design
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
