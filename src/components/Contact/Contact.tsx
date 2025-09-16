@@ -1,32 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 import './Contact.css';
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
   });
-
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -62,21 +45,19 @@ const Contact: React.FC = () => {
           <motion.div className="section-header" variants={itemVariants}>
             <h2 className="section-title">
               <span className="title-number">05.</span>
-              <span className="title-text">Get In Touch</span>
+              <span className="title-text">{t('contact.title')}</span>
             </h2>
             <div className="title-underline"></div>
             <p className="contact-description">
-              Ready to bring your ideas to life? Let's discuss how we can work together 
-              to create something amazing.
+              {t('contact.description')}
             </p>
           </motion.div>
 
-          <div className="contact-grid">
-            <motion.div className="contact-info" variants={itemVariants}>
-              <h3 className="info-title">Let's Connect</h3>
-              <p className="info-text">
-                I'm always interested in new opportunities and challenging projects. 
-                Whether you have a question or just want to say hello, feel free to reach out!
+          <div className="contact-content-grid">
+            <motion.div className="contact-info-section" variants={itemVariants}>
+              <h3 className="info-title">{t('contact.subtitle')}</h3>
+              <p className="info-description">
+                {t('contact.description')}
               </p>
               
               <div className="contact-methods">
@@ -90,7 +71,7 @@ const Contact: React.FC = () => {
                     <div className="icon-glow"></div>
                   </div>
                   <div className="method-info">
-                    <span className="method-label">Email</span>
+                    <span className="method-label">{t('contact.social.email')}</span>
                     <span className="method-value">azizabidilol7@gmail.com</span>
                   </div>
                 </motion.a>
@@ -105,13 +86,13 @@ const Contact: React.FC = () => {
                     <div className="icon-glow"></div>
                   </div>
                   <div className="method-info">
-                    <span className="method-label">Phone</span>
+                    <span className="method-label">{t('contact.info.phone')}</span>
                     <span className="method-value">+216 93 08 82 85</span>
                   </div>
                 </motion.a>
 
                 <motion.a 
-                  href="https://linkedin.com/in/med aziz abidi"
+                  href="https://linkedin.com/in/med-aziz-abidi"
                   className="contact-method"
                   whileHover={{ scale: 1.05, x: 10 }}
                   whileTap={{ scale: 0.95 }}
@@ -122,7 +103,7 @@ const Contact: React.FC = () => {
                     <div className="icon-glow"></div>
                   </div>
                   <div className="method-info">
-                    <span className="method-label">LinkedIn</span>
+                    <span className="method-label">{t('contact.social.linkedin')}</span>
                     <span className="method-value">Mohamed Aziz Abidi</span>
                   </div>
                 </motion.a>
@@ -139,63 +120,24 @@ const Contact: React.FC = () => {
                     <div className="icon-glow"></div>
                   </div>
                   <div className="method-info">
-                    <span className="method-label">GitHub</span>
+                    <span className="method-label">{t('contact.social.github')}</span>
                     <span className="method-value">MedAzizAbidii</span>
                   </div>
                 </motion.a>
+
+                <motion.div 
+                  className="contact-method location-method"
+                >
+                  <div className="method-icon location-icon">
+                    <div className="icon-glow"></div>
+                  </div>
+                  <div className="method-info">
+                    <span className="method-label">{t('contact.info.location')}</span>
+                    <span className="method-value">{t('contact.info.location')}</span>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
-
-            <motion.form className="contact-form" onSubmit={handleSubmit} variants={itemVariants}>
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="form-input"
-                />
-                <div className="input-glow"></div>
-              </div>
-
-              <div className="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="form-input"
-                />
-                <div className="input-glow"></div>
-              </div>
-
-              <div className="form-group">
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  className="form-textarea"
-                  rows={5}
-                ></textarea>
-                <div className="input-glow"></div>
-              </div>
-
-              <motion.button
-                type="submit"
-                className="submit-btn"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="btn-text">Send Message</span>
-                <div className="btn-glow"></div>
-              </motion.button>
-            </motion.form>
           </div>
         </motion.div>
       </div>

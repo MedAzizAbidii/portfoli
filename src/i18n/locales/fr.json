@@ -1,0 +1,217 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "experiences": "Expériences",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Salut, je suis",
+    "name": "Mohamed Aziz Abidi",
+    "title": "Ingénieur Logiciel",
+    "description": "Passionné par la création de solutions innovantes à travers le code. Je me spécialise dans le développement mobile et web avec un focus sur les technologies modernes et l'expérience utilisateur.",
+    "cta": "Contactez-Moi",
+    "stats": {
+      "experience": "4+ Années d'Expérience",
+      "projects": "8+ Projets Réalisés",
+      "technologies": "15+ Technologies Maîtrisées"
+    },
+    "rotatingWords": [
+      "Développeur Mobile",
+      "Développeur Web",
+      "Ingénieur Logiciel",
+      "Développeur Full Stack",
+      "Développeur React",
+      "Développeur Flutter"
+    ]
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    "subtitle": "Apprenez à mieux connaître qui je suis, ce que je fais, et mes compétences actuelles",
+    "description": "Je suis un ingénieur logiciel dévoué avec une passion pour créer des solutions numériques innovantes. Actuellement en 5ème année à ESPRIT, je combine l'excellence académique avec une expérience industrielle pratique acquise à travers plusieurs stages.",
+    "personalInfo": {
+      "age": "24",
+      "location": "Tunisie",
+      "degree": "Étudiant Ingénieur",
+      "experience": "3+ Années",
+      "projects": "20+",
+      "availability": "Disponible"
+    },
+    "profileCard": {
+      "name": "Mohamed Aziz Abidi",
+      "role": "Ingénieur Logiciel",
+      "education": "5ème Année à ESPRIT",
+      "languages": "Arabe, Français, Anglais"
+    },
+    "skills": {
+      "title": "Ce Que Je Fais",
+      "mobile": "Développement Mobile",
+      "web": "Développement Web", 
+      "backend": "Développement Backend",
+      "uiux": "Design UI/UX"
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Une collection de mes travaux à travers les stages et projets académiques",
+    "categories": {
+      "all": "Tous les Projets",
+      "internship": "Stages", 
+      "academic": "Académique"
+    },
+    "items": {
+      "leaveManagement": {
+        "title": "Application Mobile de Gestion de Congés",
+        "description": "Développement d'une application mobile de gestion de congés pour rationaliser et simplifier les demandes de congés des employés. Implémentation de workflows automatisés pour les employés, managers et RH, couvrant la soumission de demandes, les processus d'approbation et de refus. Conception et construction d'une fonctionnalité admin pour gérer les comptes employés et les notifications email.",
+        "technologies": ["Flutter", "Développement Mobile", "Intégration Backend", "Notifications Push"],
+        "company": "IGE International General Equipment",
+        "year": "2025"
+      },
+      "vehicleParts": {
+        "title": "Gestion de Pièces de Véhicules",
+        "description": "Développement d'une application mobile et web cross-platform pour gérer les pièces détachées de véhicules, en se concentrant sur l'amélioration de la traçabilité des transactions incluant les ventes, achats et gestion des stocks. Conception et implémentation d'un contrôle d'accès basé sur les rôles avec des fonctionnalités personnalisées pour répondre aux besoins spécifiques du client.",
+        "technologies": ["Développement Cross-platform", "Développement Web", "Gestion Base de Données", "Accès Basé sur Rôles"],
+        "company": "wanes auto (Freelance)",
+        "year": "2025"
+      },
+      "crowdSourcing": {
+        "title": "Application Mobile de Crowd Sourcing",
+        "description": "Conception et développement d'une application cross-platform pour le crowdsourcing en Tunisie. Construction d'une UI intuitive utilisant Flutter ; intégration de Node.js pour les opérations backend. Livraison d'un prototype testé par les parties prenantes internes avec des retours UX positifs.",
+        "technologies": ["Flutter", "Node.js", "UI/UX Mobile", "Développement Cross-platform"],
+        "company": "telcotec Industries",
+        "year": "2024"
+      },
+      "healthChain": {
+        "title": "Application HealthChain",
+        "description": "Développement d'une plateforme basée sur la blockchain pour gérer et partager en toute sécurité les données de santé personnelles avec un contrôle total du patient. Activation du stockage décentralisé de dossiers médicaux, permissions d'accès basées sur smart contracts, et vérification d'identité cryptographique. Intégration d'interopérabilité cross-système avec les systèmes hospitaliers et suivi de prescriptions en temps réel. Conception d'un chatbot alimenté par l'IA agissant comme une infirmière personnelle, fournissant des conseils basés sur les dossiers de santé du patient et l'historique de traitement. Implémentation de paiements de services de santé basés sur des tokens pour améliorer la transparence et inciter les fournisseurs de soins de santé.",
+        "technologies": ["Blockchain", "Smart Contracts", "Flutter", "NestJS", "Web3", "Cryptographie", "IA"],
+        "year": "2025"
+      },
+      "chicCercle": {
+        "title": "ChicCercle - Application ShopeMate",
+        "description": "Construction d'une application d'assistant shopping alimentée par l'IA avec scan de produits en temps réel, recommandations personnalisées et fonctionnalités de comparaison de prix.",
+        "technologies": ["iOS", "Android", "NestJS", "API Météo", "IA"],
+        "year": "2025"
+      },
+      "affariety": {
+        "title": "AFFARIETY - Plateforme E-learning",
+        "description": "Développement d'une plateforme d'apprentissage en ligne avec authentification utilisateur, gestion de cours, et un tableau de bord admin pour suivre les progrès des étudiants.",
+        "technologies": ["JavaFX", "Symfony", "SQL", "PHP"],
+        "year": "2024"
+      },
+      "cinema": {
+        "title": "Site Web de Réservation Cinéma",
+        "description": "Développement d'un site web cinéma responsive permettant aux utilisateurs de parcourir les films, voir les horaires et réserver des billets en ligne.",
+        "technologies": ["HTML", "CSS", "PHP", "SQL"],
+        "year": "2022"
+      },
+      "game2d": {
+        "title": "Développement Jeu 2D",
+        "description": "Programmation d'un jeu 2D basé sur C utilisant SDL ; inclus suivi des scores et détection de collision.",
+        "technologies": ["C", "SDL", "Développement Jeu"],
+        "year": "2021-2022"
+      }
+    }
+  },
+  "skills": {
+    "title": "Compétences & Technologies",
+    "subtitle": "Ma boîte à outils technique complète couvrant plusieurs domaines",
+    "categories": {
+      "languages": {
+        "title": "Langages de Programmation"
+      },
+      "mobile": {
+        "title": "Développement Mobile"
+      },
+      "web": {
+        "title": "Développement Web"
+      },
+      "databases": {
+        "title": "Bases de Données & Stockage"
+      },
+      "devops": {
+        "title": "DevOps & Outils"
+      },
+      "ai": {
+        "title": "IA & Apprentissage Automatique"
+      }
+    }
+  },
+  "experiences": {
+    "title": "Expérience Professionnelle",
+    "subtitle": "Mon parcours à travers divers rôles et responsabilités",
+    "items": {
+      "ige": {
+        "position": "Stagiaire Développeur Mobile",
+        "company": "IGE International General Equipment",
+        "period": "Juin 2025 - Août 2025",
+        "description": "Développement d'une application mobile de gestion de congés pour rationaliser et simplifier les demandes de congés des employés avec des workflows automatisés et des fonctionnalités admin.",
+        "achievements": [
+          "Développé une application mobile de gestion de congés pour rationaliser et simplifier les demandes de congés des employés",
+          "Implémenté des workflows automatisés pour les employés, managers et RH, couvrant la soumission de demandes, les processus d'approbation et de refus",
+          "Conçu et construit une fonctionnalité admin pour gérer les comptes employés et les notifications email"
+        ]
+      },
+      "wanesAuto": {
+        "position": "Développeur d'Applications Mobile & Web",
+        "company": "wanes auto (Freelance)",
+        "period": "Juin 2025 - Septembre 2025",
+        "description": "Développement de solutions cross-platform pour la gestion de pièces détachées de véhicules avec traçabilité avancée et contrôle d'accès basé sur les rôles.",
+        "achievements": [
+          "Développé une application mobile et web cross-platform pour gérer les pièces détachées de véhicules",
+          "Focus sur l'amélioration de la traçabilité des transactions incluant les ventes, achats et gestion des stocks",
+          "Conçu et implémenté un contrôle d'accès basé sur les rôles avec des fonctionnalités personnalisées pour répondre aux besoins spécifiques du client"
+        ]
+      },
+      "telcotec": {
+        "position": "Stagiaire Développeur Mobile",
+        "company": "telcotec Industries",
+        "period": "Juillet 2024 - Septembre 2024",
+        "description": "Construction d'une application mobile cross-platform pour les initiatives de crowdsourcing en Tunisie utilisant des technologies modernes et les meilleures pratiques UX.",
+        "achievements": [
+          "Conçu et développé une application cross-platform pour le crowdsourcing en Tunisie",
+          "Construit une UI intuitive utilisant Flutter ; intégré Node.js pour les opérations backend",
+          "Livré un prototype testé par les parties prenantes internes avec des retours UX positifs"
+        ]
+      },
+      "snr": {
+        "position": "Stagiaire Observation Technique",
+        "company": "SNR Company",
+        "period": "Juillet 2022 - Août 2022",
+        "description": "Acquisition d'expérience pratique dans la fabrication électronique et la conception PCB à travers l'observation technique et des ateliers.",
+        "achievements": [
+          "Suivi des équipes d'ingénierie et participation à des ateliers sur l'insertion de composants électroniques",
+          "Acquisition d'expérience pratique en soudure et processus de fabrication de cartes de circuits imprimés",
+          "Apprentissage des principes de conception PCB et application pratique dans des environnements industriels utilisant Proteus et Eagle"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-Moi",
+    "subtitle": "N'hésitez pas à me contacter pour des collaborations ou juste un petit bonjour",
+    "description": "Je suis toujours ouvert aux discussions sur de nouvelles opportunités, des projets innovants ou des collaborations potentielles. Que vous ayez une question sur mon travail ou que vous souhaitiez explorer une collaboration, j'aimerais vous entendre.",
+    "info": {
+      "email": "med.aziz.abidi@esprit.tn",
+      "phone": "+216 24 123 456",
+      "location": "Tunis, Tunisie"
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Quelque chose s'est mal passé",
+    "retry": "Réessayer",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "featured": "Vedette"
+  }
+}

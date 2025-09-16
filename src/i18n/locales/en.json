@@ -1,0 +1,217 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experiences": "Experiences",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Mohamed Aziz Abidi",
+    "title": "Software Engineer",
+    "description": "Passionate about creating innovative solutions through code. I specialize in mobile and web development with a focus on modern technologies and user experience.",
+    "cta": "Get In Touch",
+    "stats": {
+      "experience": "4+ Years Experience",
+      "projects": "8+ Projects Completed",
+      "technologies": "15+ Technologies Mastered"
+    },
+    "rotatingWords": [
+      "Mobile Developer",
+      "Web Developer",
+      "Software Engineer",
+      "Full Stack Developer",
+      "React Developer",
+      "Flutter Developer"
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know more about who I am, what I do, and my current skills",
+    "description": "I'm a dedicated software engineer with a passion for creating innovative digital solutions. Currently pursuing my 5th year at ESPRIT, I combine academic excellence with practical industry experience gained through multiple internships.",
+    "personalInfo": {
+      "age": "24",
+      "location": "Tunisia",
+      "degree": "Engineering Student",
+      "experience": "3+ Years",
+      "projects": "20+",
+      "availability": "Available"
+    },
+    "profileCard": {
+      "name": "Mohamed Aziz Abidi",
+      "role": "Software Engineer",
+      "education": "5th Year at ESPRIT",
+      "languages": "Arabic, French, English"
+    },
+    "skills": {
+      "title": "What I Do",
+      "mobile": "Mobile Development",
+      "web": "Web Development", 
+      "backend": "Backend Development",
+      "uiux": "UI/UX Design"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A collection of my work across internships and academic projects",
+    "categories": {
+      "all": "All Projects",
+      "internship": "Internships", 
+      "academic": "Academic"
+    },
+    "items": {
+      "leaveManagement": {
+        "title": "Leave Management Mobile App",
+        "description": "Developed a mobile leave management application to streamline and simplify employee leave requests. Implemented automated workflows for employees, managers, and HR, covering request submission, approval, and refusal processes. Designed and built an admin feature for managing employee accounts and email notifications.",
+        "technologies": ["Flutter", "Mobile Development", "Backend Integration", "Push Notifications"],
+        "company": "IGE International General Equipment",
+        "year": "2025"
+      },
+      "vehicleParts": {
+        "title": "Vehicle Spare Parts Management",
+        "description": "Developed a cross-platform mobile and web application for managing vehicle spare parts, focusing on improving traceability of transactions including sales, purchases, and stock management. Designed and implemented role-based access control with personalized features to meet client-specific needs.",
+        "technologies": ["Cross-platform Development", "Web Development", "Database Management", "Role-based Access"],
+        "company": "wanes auto (Freelance)",
+        "year": "2025"
+      },
+      "crowdSourcing": {
+        "title": "Crowd Sourcing Mobile App",
+        "description": "Designed and developed a cross-platform app for crowd sourcing in Tunisia. Built intuitive UI using Flutter; integrated Node.js for backend operations. Delivered a prototype tested by internal stakeholders with positive UX feedback.",
+        "technologies": ["Flutter", "Node.js", "Mobile UI/UX", "Cross-platform Development"],
+        "company": "telcotec Industries",
+        "year": "2024"
+      },
+      "healthChain": {
+        "title": "HealthChain App",
+        "description": "Developed a blockchain-based platform to securely manage and share personal health data with full patient control. Enabled decentralized medical record storage, smart contract-based access permissions, and cryptographic identity verification. Integrated cross-system interoperability with hospital systems and real-time prescription tracking. Designed an AI-powered chatbot acting as a personal nurse, providing guidance based on patient health records and treatment history. Implemented token-based health service payments to enhance transparency and incentivize healthcare providers.",
+        "technologies": ["Blockchain", "Smart Contracts", "Flutter", "NestJS", "Web3", "Cryptography", "AI"],
+        "year": "2025"
+      },
+      "chicCercle": {
+        "title": "ChicCercle - ShopeMate App",
+        "description": "Built an AI-powered shopping assistant app with real-time product scanning, personalized recommendations, and price comparison features.",
+        "technologies": ["iOS", "Android", "NestJS", "Weather API", "AI"],
+        "year": "2025"
+      },
+      "affariety": {
+        "title": "AFFARIETY - E-learning Platform",
+        "description": "Developed an online learning platform with user authentication, course management, and an admin dashboard for tracking student progress.",
+        "technologies": ["JavaFX", "Symfony", "SQL", "PHP"],
+        "year": "2024"
+      },
+      "cinema": {
+        "title": "Cinema Booking Website",
+        "description": "Developed a responsive cinema website allowing users to browse films, view showtimes, and book tickets online.",
+        "technologies": ["HTML", "CSS", "PHP", "SQL"],
+        "year": "2022"
+      },
+      "game2d": {
+        "title": "2D Game Development",
+        "description": "Programmed a C-based 2D game using SDL; included score tracking and collision detection.",
+        "technologies": ["C", "SDL", "Game Development"],
+        "year": "2021-2022"
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "My comprehensive technical toolkit spanning multiple domains",
+    "categories": {
+      "languages": {
+        "title": "Programming Languages"
+      },
+      "mobile": {
+        "title": "Mobile Development"
+      },
+      "web": {
+        "title": "Web Development"
+      },
+      "databases": {
+        "title": "Databases & Storage"
+      },
+      "devops": {
+        "title": "DevOps & Tools"
+      },
+      "ai": {
+        "title": "AI & Machine Learning"
+      }
+    }
+  },
+  "experiences": {
+    "title": "Professional Experience",
+    "subtitle": "My journey through various roles and responsibilities",
+    "items": {
+      "ige": {
+        "position": "Mobile Developer Intern",
+        "company": "IGE International General Equipment",
+        "period": "June 2025 - August 2025",
+        "description": "Developed a mobile leave management application to streamline and simplify employee leave requests with automated workflows and admin features.",
+        "achievements": [
+          "Developed a mobile leave management application to streamline and simplify employee leave requests",
+          "Implemented automated workflows for employees, managers, and HR, covering request submission, approval, and refusal processes",
+          "Designed and built an admin feature for managing employee accounts and email notifications"
+        ]
+      },
+      "wanesAuto": {
+        "position": "Mobile & Web Application Developer",
+        "company": "wanes auto (Freelance)",
+        "period": "June 2025 - September 2025",
+        "description": "Developed cross-platform solutions for vehicle spare parts management with advanced traceability and role-based access control.",
+        "achievements": [
+          "Developed a cross-platform mobile and web application for managing vehicle spare parts",
+          "Focused on improving traceability of transactions including sales, purchases, and stock management",
+          "Designed and implemented role-based access control with personalized features to meet client-specific needs"
+        ]
+      },
+      "telcotec": {
+        "position": "Mobile Developer Intern",
+        "company": "telcotec Industries",
+        "period": "July 2024 - September 2024",
+        "description": "Built cross-platform mobile application for crowdsourcing initiatives in Tunisia using modern technologies and UX best practices.",
+        "achievements": [
+          "Designed and developed a cross-platform app for crowd sourcing in Tunisia",
+          "Built intuitive UI using Flutter; integrated Node.js for backend operations",
+          "Delivered a prototype tested by internal stakeholders with positive UX feedback"
+        ]
+      },
+      "snr": {
+        "position": "Technical Observation Intern",
+        "company": "SNR Company",
+        "period": "July 2022 - August 2022",
+        "description": "Gained hands-on experience in electronics manufacturing and PCB design through technical observation and workshops.",
+        "achievements": [
+          "Shadowed engineering teams and participated in workshops on electronic component insertion",
+          "Gained hands-on experience in soldering and circuit board manufacturing processes",
+          "Learned PCB design principles and practical application in industrial settings using Proteus and Eagle"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Feel free to reach out for collaborations or just a friendly hello",
+    "description": "I'm always open to discussing new opportunities, innovative projects, or potential collaborations. Whether you have a question about my work or want to explore working together, I'd love to hear from you.",
+    "info": {
+      "email": "med.aziz.abidi@esprit.tn",
+      "phone": "+216 24 123 456",
+      "location": "Tunis, Tunisia"
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "featured": "Featured"
+  }
+}

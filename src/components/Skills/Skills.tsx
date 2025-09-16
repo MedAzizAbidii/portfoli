@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 import { Code, Smartphone, Globe, Database, Wrench, Brain } from 'lucide-react';
 import './Skills.css';
 
@@ -11,7 +12,6 @@ interface Skill {
 
 const skillsData = {
   languages: {
-    title: 'Programming Languages',
     icon: <Code className="w-6 h-6" />,
     skills: [
       { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
@@ -27,7 +27,6 @@ const skillsData = {
     ]
   },
   mobile: {
-    title: 'Mobile Development',
     icon: <Smartphone className="w-6 h-6" />,
     skills: [
       { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
@@ -39,7 +38,6 @@ const skillsData = {
     ]
   },
   web: {
-    title: 'Web Development',
     icon: <Globe className="w-6 h-6" />,
     skills: [
       { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
@@ -54,7 +52,6 @@ const skillsData = {
     ]
   },
   databases: {
-    title: 'Databases & Storage',
     icon: <Database className="w-6 h-6" />,
     skills: [
       { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
@@ -65,7 +62,6 @@ const skillsData = {
     ]
   },
   devops: {
-    title: 'DevOps & Tools',
     icon: <Wrench className="w-6 h-6" />,
     skills: [
       { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
@@ -78,7 +74,6 @@ const skillsData = {
     ]
   },
   ai: {
-    title: 'AI & Machine Learning',
     icon: <Brain className="w-6 h-6" />,
     skills: [
       { name: 'TensorFlow', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
@@ -90,6 +85,7 @@ const skillsData = {
 };
 
 const Skills: React.FC = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -142,11 +138,11 @@ const Skills: React.FC = () => {
           <motion.div className="section-header" variants={categoryVariants}>
             <h2 className="section-title">
               <span className="title-number">04.</span>
-              <span className="title-text">Skills & Technologies</span>
+              <span className="title-text">{t('skills.title')}</span>
             </h2>
             <div className="title-underline"></div>
             <p className="section-subtitle">
-              My comprehensive technical toolkit spanning multiple domains
+              {t('skills.subtitle')}
             </p>
           </motion.div>
 
@@ -163,7 +159,7 @@ const Skills: React.FC = () => {
                   <div className="category-icon-wrapper">
                     {categoryData.icon}
                   </div>
-                  <h3 className="category-title-new">{categoryData.title}</h3>
+                  <h3 className="category-title-new">{t(`skills.categories.${categoryKey}.title`)}</h3>
                 </div>
                 
                 <div className="skills-grid-items">

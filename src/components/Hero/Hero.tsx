@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import profileImage from '../../assets/aziz-abid.jpeg';
 import './Hero.css';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   
-  const dynamicWords = [
-    'Mobile Developer',
-    'Full-Stack Developer', 
-    'Flutter Expert',
-    'Blockchain Developer',
-    'iOS Developer',
-    'Problem Solver'
-  ];
+  const dynamicWords = t('hero.rotatingWords', { returnObjects: true }) as string[];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -108,14 +103,14 @@ const Hero: React.FC = () => {
               className="hero-greeting"
               variants={itemVariants}
             >
-              Hello, I'm 👋
+              {t('hero.greeting')} 👋
             </motion.p>
 
             <motion.h1 
               className="hero-name"
               variants={itemVariants}
             >
-              <span className="gradient-text">Mohamed Aziz Abidi</span>
+              <span className="gradient-text">{t('hero.name')}</span>
             </motion.h1>
 
             <motion.div 
@@ -123,7 +118,7 @@ const Hero: React.FC = () => {
               variants={itemVariants}
             >
               <h2 className="hero-title">
-                <span className="static-text">I'm a </span>
+                <span className="static-text">{t('hero.title')} </span>
                 <motion.span
                   key={currentWordIndex}
                   className="dynamic-text gradient-text"
@@ -141,8 +136,7 @@ const Hero: React.FC = () => {
               className="hero-description"
               variants={itemVariants}
             >
-              Aspiring mobile and full-stack developer with hands-on experience in Flutter, blockchain, and backend systems. 
-              Eager to contribute to impactful digital solutions in agile, international environments.
+              {t('hero.description')}
             </motion.p>
 
             <motion.div 
@@ -150,16 +144,16 @@ const Hero: React.FC = () => {
               variants={itemVariants}
             >
               <div className="stat">
-                <span className="stat-number gradient-text">24</span>
-                <span className="stat-label">Years Old</span>
+                <span className="stat-number gradient-text">{t('hero.stats.experience').split(' ')[0]}</span>
+                <span className="stat-label">{t('hero.stats.experience').split(' ').slice(1).join(' ')}</span>
               </div>
               <div className="stat">
-                <span className="stat-number gradient-text">5+</span>
-                <span className="stat-label">Projects</span>
+                <span className="stat-number gradient-text">{t('hero.stats.projects').split(' ')[0]}</span>
+                <span className="stat-label">{t('hero.stats.projects').split(' ').slice(1).join(' ')}</span>
               </div>
               <div className="stat">
-                <span className="stat-number gradient-text">3</span>
-                <span className="stat-label">Internships</span>
+                <span className="stat-number gradient-text">{t('hero.stats.technologies').split(' ')[0]}</span>
+                <span className="stat-label">{t('hero.stats.technologies').split(' ').slice(1).join(' ')}</span>
               </div>
             </motion.div>
 
@@ -178,7 +172,7 @@ const Hero: React.FC = () => {
                 }}
               >
                 <span className="btn-icon">📧</span>
-                Get In Touch
+                {t('hero.cta')}
               </motion.a>
 
               <motion.a

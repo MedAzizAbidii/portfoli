@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 import './Experiences.css';
 
 interface Experience {
@@ -64,6 +65,7 @@ const experiences: Experience[] = [
 ];
 
 const Experiences: React.FC = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -103,9 +105,12 @@ const Experiences: React.FC = () => {
           <motion.div className="section-header" variants={itemVariants}>
             <h2 className="section-title">
               <span className="title-number">03.</span>
-              <span className="title-text">Experience</span>
+              <span className="title-text">{t('experiences.title')}</span>
             </h2>
             <div className="title-underline"></div>
+            <p className="section-subtitle">
+              {t('experiences.subtitle')}
+            </p>
           </motion.div>
 
           <div className="timeline">
@@ -124,21 +129,24 @@ const Experiences: React.FC = () => {
                 <div className="experience-card">
                   <div className="card-header">
                     <div className="position-info">
-                      <h3 className="position-title">{experience.position}</h3>
-                      <h4 className="company-name">{experience.company}</h4>
+                      <h3 className="position-title">{t(`experiences.items.${experience.id === 1 ? 'ige' : experience.id === 2 ? 'wanesAuto' : experience.id === 3 ? 'telcotec' : 'snr'}.position`)}</h3>
+                      <h4 className="company-name">{t(`experiences.items.${experience.id === 1 ? 'ige' : experience.id === 2 ? 'wanesAuto' : experience.id === 3 ? 'telcotec' : 'snr'}.company`)}</h4>
                     </div>
                     <div className="period-badge">
-                      {experience.period}
+                      {t(`experiences.items.${experience.id === 1 ? 'ige' : experience.id === 2 ? 'wanesAuto' : experience.id === 3 ? 'telcotec' : 'snr'}.period`)}
                     </div>
                   </div>
 
                   <div className="experience-description">
-                    {experience.description.map((desc, i) => (
-                      <div key={i} className="description-item">
-                        <span className="bullet">▸</span>
-                        <p>{desc}</p>
-                      </div>
-                    ))}
+                    <p>{t(`experiences.items.${experience.id === 1 ? 'ige' : experience.id === 2 ? 'wanesAuto' : experience.id === 3 ? 'telcotec' : 'snr'}.description`)}</p>
+                    <div className="achievements-list">
+                      {(t(`experiences.items.${experience.id === 1 ? 'ige' : experience.id === 2 ? 'wanesAuto' : experience.id === 3 ? 'telcotec' : 'snr'}.achievements`, { returnObjects: true }) as string[]).map((achievement, i) => (
+                        <div key={i} className="description-item">
+                          <span className="bullet">▸</span>
+                          <p>{achievement}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   <div className="experience-tech">

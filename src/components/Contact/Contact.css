@@ -79,37 +79,45 @@
 }
 
 /* Contact Grid */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
+.contact-content-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-/* Contact Info */
-.contact-info {
+.contact-info-section {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
   padding: 40px;
 }
 
 .info-title {
   font-size: 2rem;
-  color: var(--text-primary);
+  color: var(--neon-blue);
   margin-bottom: 20px;
   font-weight: 600;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
-.info-text {
-  color: var(--text-secondary);
+.info-description {
+  color: #ccc;
   line-height: 1.7;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Contact Methods */
 .contact-methods {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .contact-method {

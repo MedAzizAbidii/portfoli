@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 
 interface NavbarProps {
@@ -7,16 +8,17 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'home', label: 'Home', href: '#home' },
-    { id: 'about', label: 'About', href: '#about' },
-    { id: 'experiences', label: 'Experience', href: '#experiences' },
-    { id: 'projects', label: 'Projects', href: '#projects' },
-    { id: 'skills', label: 'Skills', href: '#skills' },
-    { id: 'contact', label: 'Contact', href: '#contact' }
+    { id: 'home', label: t('navigation.home'), href: '#home' },
+    { id: 'about', label: t('navigation.about'), href: '#about' },
+    { id: 'experiences', label: t('navigation.experiences'), href: '#experiences' },
+    { id: 'projects', label: t('navigation.projects'), href: '#projects' },
+    { id: 'skills', label: t('navigation.skills'), href: '#skills' },
+    { id: 'contact', label: t('navigation.contact'), href: '#contact' }
   ];
 
   useEffect(() => {

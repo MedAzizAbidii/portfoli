@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar/Navbar';
 import ParticleBackground from './components/ParticleBackground/ParticleBackground';
 import Hero from './components/Hero/Hero';
@@ -8,9 +9,12 @@ import Experiences from './components/Experiences/Experiences';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
+import LanguageSwitcher from './components/LanguageSwitcher/LanguageSwitcher';
+import './i18n/i18n';
 import './App.css';
 
 function App() {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -64,7 +68,7 @@ function App() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                Initializing Portfolio...
+                {t('common.loading')}
               </motion.p>
             </div>
           </motion.div>
@@ -75,6 +79,7 @@ function App() {
         <>
           <ParticleBackground />
           <Navbar activeSection={activeSection} />
+          <LanguageSwitcher />
           <motion.main
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -1,11 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 import { MapPin, Mail, Phone, Calendar, Code, GraduationCap } from 'lucide-react';
 import profileImage from '../../assets/aziz-abid.jpeg';
 import './About.css';
 
 const About: React.FC = () => {
+  const { t } = useTranslation();
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
@@ -47,7 +49,7 @@ const About: React.FC = () => {
           <motion.div className="section-header" variants={itemVariants}>
             <h2 className="section-title">
               <span className="title-number">01.</span>
-              <span className="title-text">About Me</span>
+              <span className="title-text">{t('about.title')}</span>
             </h2>
             <div className="title-underline"></div>
           </motion.div>
@@ -78,20 +80,20 @@ const About: React.FC = () => {
                   </div>
                 </div>
                 <div className="profile-info">
-                  <h3 className="gradient-text">Mohamed Aziz Abidi</h3>
-                  <p className="profile-title">Mobile & Full-Stack Developer</p>
+                  <h3 className="gradient-text">{t('about.profileCard.name')}</h3>
+                  <p className="profile-title">{t('about.profileCard.role')}</p>
                   <div className="profile-details">
                     <div className="detail-item">
                       <MapPin size={16} />
-                      <span>Soukra, Tunis, Tunisia</span>
+                      <span>{t('about.personalInfo.location')}</span>
                     </div>
                     <div className="detail-item">
                       <Calendar size={16} />
-                      <span>24 years old</span>
+                      <span>{t('about.personalInfo.age')} years old</span>
                     </div>
                     <div className="detail-item">
                       <GraduationCap size={16} />
-                      <span>5th year at ESPRIT</span>
+                      <span>{t('about.profileCard.education')}</span>
                     </div>
                     <div className="detail-item">
                       <Mail size={16} />
@@ -115,18 +117,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="card-content">
                   <p className="description-text">
-                    I'm a passionate <span className="highlight">Mobile and Full-Stack Developer</span> 
-                    currently pursuing my B.Eng. in Mobile Computer Systems at ESPRIT. With hands-on 
-                    experience in <span className="highlight">Flutter</span>, <span className="highlight">blockchain</span>, 
-                    and <span className="highlight">backend systems</span>, I'm eager to contribute to 
-                    impactful digital solutions.
-                  </p>
-                  
-                  <p className="description-text">
-                    My expertise spans across mobile development, web technologies, and emerging innovations. 
-                    I bring proven teamwork, leadership, and communication skills, always staying 
-                    <span className="highlight"> adaptable</span>, <span className="highlight">curious</span>, 
-                    and <span className="highlight">results-driven</span> in my approach to technology.
+                    {t('about.description')}
                   </p>
                   
                   <div className="education-section">
@@ -178,31 +169,23 @@ const About: React.FC = () => {
           <motion.div className="interests-section" variants={itemVariants}>
             <div className="interests-card hologram-card">
               <div className="card-glow"></div>
-              <h4 className="gradient-text">Interests & Methodologies</h4>
+              <h4 className="gradient-text">{t('about.skills.title')}</h4>
               <div className="interests-grid">
                 <div className="interest-item">
                   <span className="interest-emoji">📱</span>
-                  <span>Mobile Development</span>
+                  <span>{t('about.skills.mobile')}</span>
                 </div>
                 <div className="interest-item">
-                  <span className="interest-emoji">🔗</span>
-                  <span>Blockchain Technology</span>
+                  <span className="interest-emoji">🌐</span>
+                  <span>{t('about.skills.web')}</span>
                 </div>
                 <div className="interest-item">
-                  <span className="interest-emoji">🤖</span>
-                  <span>AI & Machine Learning</span>
+                  <span className="interest-emoji">🔧</span>
+                  <span>{t('about.skills.backend')}</span>
                 </div>
                 <div className="interest-item">
-                  <span className="interest-emoji">🏃‍♂️</span>
-                  <span>Agile Methodology</span>
-                </div>
-                <div className="interest-item">
-                  <span className="interest-emoji">📊</span>
-                  <span>Scrum Framework</span>
-                </div>
-                <div className="interest-item">
-                  <span className="interest-emoji">📐</span>
-                  <span>UML Design</span>
+                  <span className="interest-emoji">🎨</span>
+                  <span>{t('about.skills.uiux')}</span>
                 </div>
               </div>
             </div>

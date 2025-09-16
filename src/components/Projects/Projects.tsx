@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { 
   Code,
   Smartphone,
@@ -110,6 +111,7 @@ const projects = {
 };
 
 const Projects: React.FC = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<'all' | 'internship' | 'academic'>('all');
 
   const getCategoryIcon = (category: string) => {
@@ -175,11 +177,11 @@ const Projects: React.FC = () => {
         >
           <h2 className="section-title">
             <span className="title-number">02.</span>
-            <span className="title-text">Projects</span>
+            <span className="title-text">{t('projects.title')}</span>
           </h2>
           <div className="title-underline"></div>
           <p className="section-subtitle">
-            A collection of my work across internships and academic projects
+            {t('projects.subtitle')}
           </p>
         </motion.div>
 
@@ -206,9 +208,9 @@ const Projects: React.FC = () => {
             boxShadow: '0 8px 32px rgba(0, 255, 255, 0.1)'
           }}>
             {[
-              { key: 'all', label: 'All Projects', icon: <Star className="w-4 h-4" /> },
-              { key: 'internship', label: 'Internships', icon: <Building className="w-4 h-4" /> },
-              { key: 'academic', label: 'Academic', icon: <Award className="w-4 h-4" /> }
+              { key: 'all', label: t('projects.categories.all'), icon: <Star className="w-4 h-4" /> },
+              { key: 'internship', label: t('projects.categories.internship'), icon: <Building className="w-4 h-4" /> },
+              { key: 'academic', label: t('projects.categories.academic'), icon: <Award className="w-4 h-4" /> }
             ].map((category) => (
               <button
                 key={category.key}
@@ -292,7 +294,7 @@ const Projects: React.FC = () => {
                     boxShadow: '0 4px 15px rgba(255, 215, 0, 0.3)'
                   }}>
                     <Star className="w-3 h-3" />
-                    Featured
+                    {t('common.featured')}
                   </div>
                 )}
 
@@ -321,7 +323,13 @@ const Projects: React.FC = () => {
                       <h3 className="project-title" style={{ 
                         marginBottom: '10px',
                         textAlign: 'center'
-                      }}>{project.title}</h3>
+                      }}>{t(`projects.items.${project.id === 1 ? 'leaveManagement' : 
+                            project.id === 2 ? 'vehicleParts' : 
+                            project.id === 3 ? 'crowdSourcing' : 
+                            project.id === 4 ? 'healthChain' : 
+                            project.id === 5 ? 'chicCercle' : 
+                            project.id === 6 ? 'affariety' : 
+                            project.id === 7 ? 'cinema' : 'game2d'}.title`)}</h3>
                       <div className="project-meta" style={{
                         display: 'flex',
                         alignItems: 'center',
@@ -362,7 +370,13 @@ const Projects: React.FC = () => {
                     color: '#ccc',
                     margin: '0'
                   }}>
-                    {project.description}
+                    {t(`projects.items.${project.id === 1 ? 'leaveManagement' : 
+                         project.id === 2 ? 'vehicleParts' : 
+                         project.id === 3 ? 'crowdSourcing' : 
+                         project.id === 4 ? 'healthChain' : 
+                         project.id === 5 ? 'chicCercle' : 
+                         project.id === 6 ? 'affariety' : 
+                         project.id === 7 ? 'cinema' : 'game2d'}.description`)}
                   </p>
                 </div>
 
